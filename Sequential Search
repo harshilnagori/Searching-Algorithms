@@ -1,0 +1,52 @@
+//Name:- Harshil Nagori 
+//Class-ENTC A2
+//PRN-24070123046
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, key;
+
+    // Input size of array
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    int arr[n];
+
+    // Input elements
+    cout << "Enter " << n << " elements:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    // Input element to search
+    cout << "Enter the element to search: ";
+    cin >> key;
+
+    // Sequential Search
+    bool found = false;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == key) {
+            cout << "Element " << key << " found at index " << i
+                 << " (position " << i + 1 << ").\n";
+            found = true;
+            break; // stop after finding the first occurrence
+        }
+    }
+
+    if (!found) {
+        cout << "Element " << key << " not found in the array.\n";
+    }
+
+    return 0;
+}
+
+
+/*Output:-
+Enter the number of elements: 9
+Enter 9 elements:
+3 6 4 7 9 1 3 4 2 
+Enter the element to search: 5
+Element 5 not found in the array.
+*/
